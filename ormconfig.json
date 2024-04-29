@@ -1,0 +1,9 @@
+{
+  "type": "mysql",
+  "host": "154.12.239.106",
+  "port": 3306,
+  "username": "root",
+  "password": "Pj.}KRa_2D[*",
+  "database": "ki659813_laffego",
+  "entities": ["./dist/**/*{.entity.js}"]
+}
