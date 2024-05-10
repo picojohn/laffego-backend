@@ -12,8 +12,9 @@ import { HttpModule } from '@nestjs/axios';
     TypeOrmModule.forFeature([ELogin]),
     JwtModule.register({
       secret:
-        '87123798129347912739817283791827398127938712983JHQWSJHKJSDHUIAHDUIHQW',
-      signOptions: { expiresIn: '5h' },
+      //  '87123798129347912739817283791827398127938712983JHQWSJHKJSDHUIAHDUIHQW',
+      "7AfJJNfJdfMcH5c+4dznjotmLnR+qyagJmGdFpiVXCswCutRmj+fsloWSlOK0yHT"
+     // signOptions: { expiresIn: '5h' },
     }),
      HttpModule
    ],

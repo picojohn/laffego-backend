@@ -6,7 +6,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
-  @ApiTags('Secsel Status Of Service')
+  @ApiTags('Laffego Status Of Service')
   @Get()
   getHello() {
     return this.appService.getStatus();
