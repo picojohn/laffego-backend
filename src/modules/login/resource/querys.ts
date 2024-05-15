@@ -1,6 +1,8 @@
 export enum Querys {
-    GET_ROLES_BY_ID = `SELECT * FROM Roles WHERE id = '$id'`,
-    GET_SUBMODULE = `SELECT * FROM SubModulos `,
-    GET_MODULE = `SELECT * FROM Modulos `,
-    GET_MENUPERMISSION_BY_IDROLE = `SELECT * FROM MenuPermisos WHERE idRol = $idRol`,
+    GET_ROLES = `SELECT * FROM roles`,
+    GET_OPERATIONS = `select * from operations  where status = true`,
+    GET_SERVICES = `select * from services  where status = true`,
+    GET_OPERATIONS_BY_ID = `select * from operations  where id = '$id'`,
+    GET_SERVICES_BY_ID = `select * from services  where id = '$id'`,
+
 }

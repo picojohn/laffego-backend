@@ -10,6 +10,8 @@ import { ServeStaticModule } from '@nestjs/serve-static';
  import { ModulesModule } from './modules/module.module';
  import { ExceptionModule } from './exception/exception.module';
 import { getConnectionOptions } from 'typeorm';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { MorganInterceptor, MorganModule } from 'nest-morgan';
 //import { MailerModule } from '@nestjs-modules/mailer';
 //import { CONFIG_MAILER } from './modules/config.general';
 
@@ -30,17 +32,17 @@ import { getConnectionOptions } from 'typeorm';
           autoLoadEntities: true,
         }),
     }),
-   // MorganModule,
+    MorganModule,
     ModulesModule,
   //  MailerModule.forRoot(CONFIG_MAILER)
   ],
   controllers: [AppController],
   providers: [
     AppService,
-    // {
-    //   provide: APP_INTERCEPTOR,
-    //   useClass: MorganInterceptor('dev'),
-    // },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: MorganInterceptor('dev'),
+    },
   ],
 })
 export class AppModule { }
