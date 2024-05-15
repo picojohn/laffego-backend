@@ -6,7 +6,7 @@ import { RolesModule } from './roles/roles.module';
 @Module({
   imports: [
    LoginModule,
-   RolesModule
+
   ],
 })
 export class ModulesModule { }

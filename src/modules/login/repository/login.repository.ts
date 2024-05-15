@@ -166,4 +166,26 @@ export class LoginRepository {
 
 
 
+  //nuevos endpoints
+
+  
+  async getLoginAutorizacion(token: string): Promise<any> {
+    const config = {
+      headers: {
+        'APIKEY': 'LEFFEGO2020',
+        'Authorization': `Bearer ${token}`,
+      },
+    };
+
+    try {
+      const response = await this.httpService.get('url_del_backend_en_java/datos', config).toPromise();
+      return response.data;
+    } catch (error) {
+      throw new Error('Error al obtener datos del backend en Java');
+    }
+  }
+
+
+
+
 }

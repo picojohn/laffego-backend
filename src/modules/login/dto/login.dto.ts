@@ -228,7 +228,15 @@ export class crearOrdenDto   {
 
     }
 
+// nuevo modelo de envio
 
+// user-login.dto.ts
+export class UserLoginDto {
+  email: string;
+  password: string;
+  push_id: string;
+  device_type: number;
+}
 
 
 

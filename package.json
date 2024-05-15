@@ -39,6 +39,7 @@
     "core-js": "^3.37.0",
     "helmet": "^7.1.0",
     "mysql": "^2.18.1",
+    "nest-morgan": "^2.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
